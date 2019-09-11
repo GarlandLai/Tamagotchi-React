@@ -1,10 +1,11 @@
 import React from 'react';
 import '../App.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import Feed from './Feed'
-import Play from './Play'
-import Rest from './Rest'
-import Header from './Header'
+import Feed from './Feed';
+import Play from './Play';
+import Rest from './Rest';
+import Header from './Header';
+import Picture from './Picture';
 
 class App extends React.Component {
   constructor(props) {
@@ -36,12 +37,14 @@ class App extends React.Component {
       <div>
       <Header/>
       <Container>
+      <Picture />
+      <br/>
       <Row>
       <Col>Health: {this.state.health}</Col>
       <Col>Fullness: {this.state.fullness}</Col>
       <Col>Happiness: {this.state.happiness}</Col>
       </Row>
-
+      <br/>
       <Row>
       <Col><Rest onRest={this.handleRest}/></Col>
       <Col><Feed onFeed={this.handleFeed}/></Col>
